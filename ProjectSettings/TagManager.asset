@@ -11,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Ground
+  - Background
+  - Wall
   - 
   - 
   - 
@@ -40,4 +40,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2558484775
+    locked: 0
+  - name: Wall
+    uniqueID: 1665036631
+    locked: 0
+  - name: Back People
+    uniqueID: 3688605173
+    locked: 0
+  - name: Back House
+    uniqueID: 3586894325
+    locked: 0
+  - name: Middle House
+    uniqueID: 4267741943
+    locked: 0
+  - name: Front House
+    uniqueID: 245949659
+    locked: 0
+  - name: Front People
+    uniqueID: 146454557
     locked: 0
