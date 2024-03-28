@@ -5,6 +5,10 @@ using UnityEngine;
 public class InteractableObject : CollidableObject
 {
     private bool z_Interacted = false;
+    [SerializeField] private InteractionPromptUI _interactionPromptUI;
+
+    [SerializeField] private string _prompt;
+    public string InteractionPrompt => _prompt; // returns _prompt, like get _prompt
     
     protected override void OnCollided(GameObject collidedObject)
     {
@@ -12,7 +16,12 @@ public class InteractableObject : CollidableObject
         if(Input.GetKey(KeyCode.E))
         {
             OnInteract();
-        } 
+        }
+
+        if (!z_Interacted)
+        {
+            _interactionPromptUI.SetUp(_prompt);
+        }
     }
 
     protected virtual void OnInteract()
@@ -20,6 +29,7 @@ public class InteractableObject : CollidableObject
         if (!z_Interacted)
         {
             z_Interacted = true;
+            _interactionPromptUI.Close();
             Debug.Log("Interact with " + name);
         }
     }

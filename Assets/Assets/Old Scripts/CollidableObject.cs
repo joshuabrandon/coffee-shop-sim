@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class CollidableObject : MonoBehaviour
 {
-    [SerializeField]
-    private Collider2D z_Collider;
-    [SerializeField]
-    private ContactFilter2D z_Filter;
+    [SerializeField] private Collider2D z_Collider;
+    [SerializeField] private ContactFilter2D z_Filter;
     private List<Collider2D> z_CollidedObjects = new List<Collider2D>(1);
 
 
@@ -27,6 +25,6 @@ public class CollidableObject : MonoBehaviour
 
     protected virtual void OnCollided(GameObject collidedObject)
     {
-        Debug.Log("Collided with " + collidedObject.name);
+
     }
 }
